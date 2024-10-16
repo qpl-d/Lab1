@@ -6,29 +6,22 @@ public class Main {
     public static PrintStream out = System.out;
 
     public static void main(String[] args) {
-        double x = in.nextDouble();
-        double a = in.nextDouble(), b = in.nextDouble(), c = in.nextDouble(); // ввод переменных
-        double total = a + b + c;
-        out.println("Груз A: " + a);
-        out.println("Груз B: " + b);
-        out.println("Груз C: " + c);
-        out.println("Общий вес грузов: " + total);
-        out.println("Грузоподъемность лифта: " + x + "\n");
-        out.println("В лифт можно загрузить: ");
+        int x = in.nextInt(), a = in.nextInt(), b = in.nextInt(), c = in.nextInt(); // ввод переменных
 
         boolean load = false; // флаг для отслеживания загруженных в лифт грузов
 
-            int count = 0; //счетчик для количества грузов в лифте
+        int count = 0; //счетчик для количества грузов в лифте
 
         // проверка комбинации из трех грузов
         if (a + b + c <= x) {
-            out.println("грузы A, B, C: " + (a + b + c));
+                out.println("грузы A, B, C: " + (a + b + c));
             load = true;
             count = 3;
         }
 
         // проверка комбинаций из двух грузов
         else if (a + b <= x || a + c <= x || b + c <= x) {
+
             if (a + b <= x) {
                 out.println("грузы A, B: " + (a + b));
             }
@@ -43,7 +36,8 @@ public class Main {
         }
 
         // проверка на случай, если в лифт можно поместить только один груз
-        else {
+        else  {
+
             if (a <= x) {
                 out.println("груз A: " + a);
                 load = true;
@@ -69,4 +63,3 @@ public class Main {
         out.println("Количетсво грузов в лифте: " + count);
     }
 }
-
