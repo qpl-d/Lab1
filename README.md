@@ -139,7 +139,7 @@ public class Main {
 
         // проверка комбинации из трех грузов
         if (a + b + c <= x) {
-                out.println("грузы A, B, C: " + (a + b + c));
+            out.println("грузы A, B, C: " + (a + b + c));
             load = true;
             count = 3;
         }
